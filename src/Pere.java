@@ -42,7 +42,8 @@ public class Pere extends Personne{
     }
 
 
-    public void saisiSalaire() {
+    public void saisir() {
+            super.saisir();
         Scanner saisie = new Scanner(System.in);
         System.out.println("Veuillez Enregistrer votre Salaire");
         setSalaire(saisie.nextLine());
@@ -50,6 +51,7 @@ public class Pere extends Personne{
         setNombreEnfant(saisie.nextInt());
         System.out.println("Vous Avez Combien de Femmes ?");
         setNombreFemme(saisie.nextInt());
+
     }
     public String travailler() {
         Scanner saisie = new Scanner(System.in);
@@ -58,6 +60,11 @@ public class Pere extends Personne{
         return travail;
     }
 
+    public void afficher(){
+        super.afficher();
+        System.out.println("Votre salaire est de "+getSalaire());
+        System.out.println("Vous avez " +" " +getNombreEnfant()+" "+"enfants et"+" "+getNombreFemme()+" "+"de femmes");
+    }
     public String manger(){
         Scanner saisie = new Scanner(System.in);
         System.out.println("Vous mangez quoi ?");
